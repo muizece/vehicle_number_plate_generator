@@ -69,7 +69,9 @@ class Program
 
     static void GenerateImagesTemplate1(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template1.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template1.png");
+
+
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template1");
         Directory.CreateDirectory(outputDirectory);
 
@@ -87,7 +89,7 @@ class Program
 
     static void GenerateImagesTemplate2(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template2.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template2.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template2");
         Directory.CreateDirectory(outputDirectory);
 
@@ -104,7 +106,7 @@ class Program
 
     static void GenerateImagesTemplate3(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template3.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template3.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template3");
         Directory.CreateDirectory(outputDirectory);
 
@@ -121,7 +123,7 @@ class Program
 
     static void GenerateImagesTemplate4(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template4.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template4.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template4");
         Directory.CreateDirectory(outputDirectory);
 
@@ -138,7 +140,7 @@ class Program
 
     static void GenerateImagesTemplate5(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template5.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template5.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template5");
         Directory.CreateDirectory(outputDirectory);
 
@@ -155,7 +157,7 @@ class Program
 
     static void GenerateImagesTemplate6(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template6.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template6.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template6");
         Directory.CreateDirectory(outputDirectory);
 
@@ -173,7 +175,7 @@ class Program
 
     static void GenerateImagesTemplate7(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template7.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template7.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template7");
         Directory.CreateDirectory(outputDirectory);
 
@@ -190,7 +192,7 @@ class Program
 
     static void GenerateImagesTemplate8(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template8.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template8.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template8");
         Directory.CreateDirectory(outputDirectory);
 
@@ -207,7 +209,7 @@ class Program
 
     static void GenerateImagesTemplate9(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template9.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template9.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template9");
         Directory.CreateDirectory(outputDirectory);
 
@@ -233,7 +235,7 @@ class Program
 
     static void GenerateImagesTemplate10(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template10.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template10.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template10");
         Directory.CreateDirectory(outputDirectory);
 
@@ -257,7 +259,7 @@ class Program
 
     static void GenerateImagesTemplate11(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template11.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template11.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template11");
         Directory.CreateDirectory(outputDirectory);
 
@@ -274,7 +276,7 @@ class Program
 
     static void GenerateImagesTemplate12(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template12.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template12.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template12");
         Directory.CreateDirectory(outputDirectory);
 
@@ -291,7 +293,7 @@ class Program
 
     static void GenerateImagesTemplate13(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template13.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template13.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template13");
         Directory.CreateDirectory(outputDirectory);
 
@@ -308,7 +310,7 @@ class Program
 
     static void GenerateImagesTemplate14(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template14.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template14.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template14");
         Directory.CreateDirectory(outputDirectory);
 
@@ -325,7 +327,7 @@ class Program
 
     static void GenerateImagesTemplate15(int imageCount, int digitCount)
     {
-        string originalImagePath = @"D:\WOQOD\Images\template15.png";
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template15.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template15");
         Directory.CreateDirectory(outputDirectory);
 
