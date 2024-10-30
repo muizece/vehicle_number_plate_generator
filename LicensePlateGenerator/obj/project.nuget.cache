@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "FpEFTNzJ3M7I27thYD/eLq81JxsfppW8GhOwZCB3AgyxoXutMT9nZgKyTI6ggw5B+9c3XB5HDECC/ZlFrnaoTw==",
+  "success": true,
+  "projectFilePath": "D:\\WOQOD\\LicensePlateGenerator\\LicensePlateGenerator\\LicensePlateGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\system.drawing.common\\8.0.10\\system.drawing.common.8.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}
