@@ -15,10 +15,10 @@ class Program
         switch (templateChoice)
         {
             case 1:
-                GenerateImagesTemplate1(1000, 6);
+                GenerateImagesTemplate1(1000);
                 break;
             case 2:
-                GenerateImagesTemplate2(1000, 6);
+                GenerateImagesTemplate2(1000);
                 break;
             case 3:
                 GenerateImagesTemplate3(1000, 5);
@@ -67,7 +67,7 @@ class Program
         Console.WriteLine("All images have been generated.");
     }
 
-    static void GenerateImagesTemplate1(int imageCount, int digitCount)
+    static void GenerateImagesTemplate1(int imageCount)
     {
         string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template1.png");
 
@@ -82,12 +82,14 @@ class Program
         Brush colorBrush = Brushes.Black;
 
         Brush shadowBrush = new SolidBrush(Color.Gray);
+        Random random = new Random();
 
+        int digitCount = random.Next(4, 7);
 
         GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
     }
 
-    static void GenerateImagesTemplate2(int imageCount, int digitCount)
+    static void GenerateImagesTemplate2(int imageCount)
     {
         string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template2.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template2");
@@ -100,7 +102,9 @@ class Program
         Brush colorBrush = Brushes.White;
 
         Brush shadowBrush = new SolidBrush(Color.Gray);
+        Random random = new Random();
 
+        int digitCount = random.Next(4, 7);
         GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
     }
 
