@@ -81,12 +81,11 @@ class Program
         PointF position = new PointF(50, 81);
         Brush colorBrush = Brushes.Black;
 
-        Brush shadowBrush = new SolidBrush(Color.Gray);
         Random random = new Random();
 
         int digitCount = random.Next(4, 7);
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
     }
 
     static void GenerateImagesTemplate2(int imageCount)
@@ -101,11 +100,10 @@ class Program
         PointF position = new PointF(48, 81);
         Brush colorBrush = Brushes.White;
 
-        Brush shadowBrush = new SolidBrush(Color.Gray);
         Random random = new Random();
 
         int digitCount = random.Next(4, 7);
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
     }
 
     static void GenerateImagesTemplate3(int imageCount, int digitCount)
@@ -120,9 +118,8 @@ class Program
         PointF position = new PointF(115, 85);
         Brush colorBrush = Brushes.Black;
 
-        Brush shadowBrush = new SolidBrush(Color.FromArgb(192, 192, 192));
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
     }
 
     static void GenerateImagesTemplate4(int imageCount, int digitCount)
@@ -137,9 +134,8 @@ class Program
         PointF position = new PointF(115, 80);
         Brush colorBrush = Brushes.Black;
 
-        Brush shadowBrush = new SolidBrush(Color.Gray);
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
     }
 
     static void GenerateImagesTemplate5(int imageCount, int digitCount)
@@ -154,9 +150,8 @@ class Program
         PointF position = new PointF(120, 85);
         Brush colorBrush = Brushes.Black;
 
-        Brush shadowBrush = new SolidBrush(Color.Gray);
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
     }
 
     static void GenerateImagesTemplate6(int imageCount, int digitCount)
@@ -171,9 +166,8 @@ class Program
         PointF position = new PointF(08, 54);
         Brush colorBrush = Brushes.Black;
 
-        Brush shadowBrush = new SolidBrush(Color.Gray);
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
     }
 
 
@@ -189,9 +183,8 @@ class Program
         PointF position = new PointF(108, 83);
         Brush colorBrush = Brushes.Black;
 
-        Brush shadowBrush = new SolidBrush(Color.Gray);
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
     }
 
     static void GenerateImagesTemplate8(int imageCount, int digitCount)
@@ -206,9 +199,8 @@ class Program
         PointF position = new PointF(116, 90);
         Brush colorBrush = Brushes.Black;
 
-        Brush shadowBrush = new SolidBrush(Color.Gray);
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
     }
 
     static void GenerateImagesTemplate9(int imageCount, int digitCount)
@@ -236,9 +228,8 @@ class Program
         Brush colorBrush = new SolidBrush(sampledColor);
 
 
-        Brush shadowBrush = new SolidBrush(Color.Gray);
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, eraseAreaSingleDigit, sourceAreaSingleDigit, font, position, positionSingleDigit, colorBrush, shadowBrush, imageCount, digitCount, true);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, eraseAreaSingleDigit, sourceAreaSingleDigit, font, position, positionSingleDigit, colorBrush, imageCount, digitCount, true);
     }
 
     static void GenerateImagesTemplate10(int imageCount, int digitCount)
@@ -260,9 +251,8 @@ class Program
 
         Brush colorBrush = new SolidBrush(sampledColor);
 
-        Brush shadowBrush = new SolidBrush(Color.Gray);
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
     }
 
     static void GenerateImagesTemplate11(int imageCount, int digitCount)
@@ -277,9 +267,8 @@ class Program
         PointF position = new PointF(120, 90);
         Brush colorBrush = Brushes.Black;
 
-        Brush shadowBrush = new SolidBrush(Color.Gray);
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
     }
 
     static void GenerateImagesTemplate12(int imageCount, int digitCount)
@@ -294,9 +283,8 @@ class Program
         PointF position = new PointF(122, 95);
         Brush colorBrush = Brushes.Black;
 
-        Brush shadowBrush = new SolidBrush(Color.White);
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
     }
 
     static void GenerateImagesTemplate13(int imageCount, int digitCount)
@@ -311,9 +299,8 @@ class Program
         PointF position = new PointF(21, 64);
         Brush colorBrush = Brushes.White;
 
-        Brush shadowBrush = new SolidBrush(Color.Gray);
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
     }
 
     static void GenerateImagesTemplate14(int imageCount, int digitCount)
@@ -328,9 +315,8 @@ class Program
         PointF position = new PointF(91, 18);
         Brush colorBrush = Brushes.White;
 
-        Brush shadowBrush = new SolidBrush(Color.Gray);
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
     }
 
     static void GenerateImagesTemplate15(int imageCount, int digitCount)
@@ -345,9 +331,8 @@ class Program
         PointF position = new PointF(115, 85);
         Brush colorBrush = Brushes.Black;
 
-        Brush shadowBrush = new SolidBrush(Color.Gray);
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, shadowBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
     }
 
     static Color GetAverageColor(Bitmap bitmap, Rectangle sampleArea)
@@ -376,7 +361,7 @@ class Program
         return Color.FromArgb(r, g, b);
     }
 
-    static void GenerateImages(string originalImagePath, string outputDirectory, Rectangle eraseArea, Rectangle sourceArea, Rectangle eraseAreaSingleDigit, Rectangle sourceAreaSingleDigit, Font font, PointF position, PointF positionSingleDigit, Brush colorBrush, Brush shadowBrush, int imageCount, int digitCount, bool includeSingleDigitArea = false)
+    static void GenerateImages(string originalImagePath, string outputDirectory, Rectangle eraseArea, Rectangle sourceArea, Rectangle eraseAreaSingleDigit, Rectangle sourceAreaSingleDigit, Font font, PointF position, PointF positionSingleDigit, Brush colorBrush, int imageCount, int digitCount, bool includeSingleDigitArea = false)
     {
         Random random = new Random();
         for (int numberPlate = 0; numberPlate < imageCount; numberPlate++)
