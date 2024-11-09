@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 
@@ -100,15 +101,15 @@ class Program
 
         Rectangle eraseArea = new Rectangle(60, 78, 238, 74);
         Rectangle sourceArea = new Rectangle(61, 72, 235, 5);
-        Font font = new Font("Roadgeek 2005 Mittelschrift", 62, FontStyle.Regular);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 60, FontStyle.Regular);
         PointF position = new PointF(48, 66);
-        Brush colorBrush = Brushes.GhostWhite;
-        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Black));
+        Brush colorBrush = Brushes.White;
+        Brush darkShadowBrush = new LinearGradientBrush(new Point(0, 0),new Point(100, 100),Color.FromArgb(120, Color.White),Color.Black);
         Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.Black));
         Random random = new Random();
 
         int digitCount = random.Next(4, 7);
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
     static void GenerateImagesTemplate3(int imageCount, int digitCount)
     {
@@ -116,9 +117,9 @@ class Program
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template3");
         Directory.CreateDirectory(outputDirectory);
 
-        Rectangle eraseArea = new Rectangle(125, 80, 182, 70);
+        Rectangle eraseArea = new Rectangle(130, 80, 182, 70);
         Rectangle sourceArea = new Rectangle(135, 68, 167, 10);
-        Font font = new Font("Roadgeek 2005 Mittelschrift", 60, FontStyle.Regular);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 58, FontStyle.Bold);
         PointF position = new PointF(115, 72);
         Brush colorBrush = Brushes.Black;
         Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Gray));
@@ -188,7 +189,7 @@ class Program
 
         Rectangle eraseArea = new Rectangle(120, 73, 175, 70);
         Rectangle sourceArea = new Rectangle(122, 64, 34, 08);
-        Font font = new Font("Roadgeek 2005 Mittelschrift", 58, FontStyle.Regular);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 56, FontStyle.Regular);
         PointF position = new PointF(108, 68);
         Brush colorBrush = Brushes.Black;
         Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.White));
@@ -252,7 +253,7 @@ class Program
 
         Rectangle eraseArea = new Rectangle(94, 50, 142, 69);
         Rectangle sourceArea = new Rectangle(17, 60, 60, 40);
-        Font font = new Font("Roadgeek 2005 Mittelschrift", 60, FontStyle.Bold);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 58, FontStyle.Bold);
         PointF position = new PointF(76, 40);
         Color sampledColor;
         using (Bitmap bitmap = new Bitmap(originalImagePath))
@@ -293,7 +294,7 @@ class Program
 
         Rectangle eraseArea = new Rectangle(140, 85, 185, 80);
         Rectangle sourceArea = new Rectangle(132, 64, 34, 08);
-        Font font = new Font("Roadgeek 2005 Mittelschrift", 64, FontStyle.Regular);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 62, FontStyle.Regular);
         PointF position = new PointF(122, 75);
         Brush colorBrush = Brushes.Black;
         Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Gray));
@@ -314,7 +315,7 @@ class Program
         PointF position = new PointF(21, 64);
         Brush colorBrush = Brushes.White;
         Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Black));
-        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.Black));
 
         GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
@@ -330,8 +331,8 @@ class Program
         Font font = new Font("Roadgeek 2005 Mittelschrift", 58, FontStyle.Regular);
         PointF position = new PointF(91, 10);
         Brush colorBrush = Brushes.White;
-        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Blue));
-        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Black));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.Black));
 
         GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
@@ -396,7 +397,7 @@ class Program
     static void GenerateImages(string originalImagePath, string outputDirectory, Rectangle eraseArea, Rectangle sourceArea, Rectangle eraseAreaSingleDigit, Rectangle sourceAreaSingleDigit, Font font, PointF position, PointF positionSingleDigit, Brush colorBrush, Brush darkShadowBrush, Brush lightShadowBrush, int imageCount, int digitCount, bool includeSingleDigitArea = false, bool applyBlur = false)
     {
         Random random = new Random();
-        for (int numberPlate = 0; numberPlate < imageCount; numberPlate++)
+        for (int numberPlate = 0; numberPlate < 3; numberPlate++)
         {
             using (Bitmap bitmap = new Bitmap(originalImagePath))
             using (Graphics graphics = Graphics.FromImage(bitmap))
@@ -428,8 +429,8 @@ class Program
 
             // Shadow effects
             //Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Black));
-            float darkShadowOffsetX = 1;
-            float darkShadowOffsetY = 1;
+            float darkShadowOffsetX = 3;
+            float darkShadowOffsetY = -3;
             graphics.DrawString(randomNumber, font, darkShadowBrush, centeredX + darkShadowOffsetX, position.Y + darkShadowOffsetY);
 
             //Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.White));
