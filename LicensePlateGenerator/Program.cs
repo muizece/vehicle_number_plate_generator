@@ -77,16 +77,20 @@ class Program
 
         Rectangle eraseArea = new Rectangle(57, 81, 254, 69);
         Rectangle sourceArea = new Rectangle(57, 73, 34, 10);
-        Font font = new Font("Bahnschrift SemiBold", 56, FontStyle.Bold);
-        PointF position = new PointF(50, 81);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 62, FontStyle.Regular);
+        PointF position = new PointF(50, 70);
         Brush colorBrush = Brushes.Black;
+
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Gray));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
         Random random = new Random();
 
         int digitCount = random.Next(4, 7);
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
+
 
     static void GenerateImagesTemplate2(int imageCount)
     {
@@ -94,32 +98,33 @@ class Program
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template2");
         Directory.CreateDirectory(outputDirectory);
 
-        Rectangle eraseArea = new Rectangle(52, 76, 246, 67);
-        Rectangle sourceArea = new Rectangle(60, 30, 40, 50);
-        Font font = new Font("Bahnschrift SemiBold", 52, FontStyle.Bold);
-        PointF position = new PointF(48, 81);
-        Brush colorBrush = Brushes.White;
-
+        Rectangle eraseArea = new Rectangle(60, 78, 238, 74);
+        Rectangle sourceArea = new Rectangle(61, 72, 235, 5);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 62, FontStyle.Regular);
+        PointF position = new PointF(48, 66);
+        Brush colorBrush = Brushes.GhostWhite;
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Black));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.Black));
         Random random = new Random();
 
         int digitCount = random.Next(4, 7);
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, false);
     }
-
     static void GenerateImagesTemplate3(int imageCount, int digitCount)
     {
         string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template3.png");
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template3");
         Directory.CreateDirectory(outputDirectory);
 
-        Rectangle eraseArea = new Rectangle(125, 80, 182, 66);
-        Rectangle sourceArea = new Rectangle(137, 19, 40, 40);
-        Font font = new Font("Bahnschrift SemiBold", 50, FontStyle.Bold);
-        PointF position = new PointF(115, 85);
+        Rectangle eraseArea = new Rectangle(125, 80, 182, 70);
+        Rectangle sourceArea = new Rectangle(135, 68, 167, 10);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 60, FontStyle.Regular);
+        PointF position = new PointF(115, 72);
         Brush colorBrush = Brushes.Black;
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Gray));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
-
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
     static void GenerateImagesTemplate4(int imageCount, int digitCount)
@@ -133,9 +138,10 @@ class Program
         Font font = new Font("Bahnschrift SemiBold Condensed", 58, FontStyle.Regular);
         PointF position = new PointF(115, 80);
         Brush colorBrush = Brushes.Black;
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Gray));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
-
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
     static void GenerateImagesTemplate5(int imageCount, int digitCount)
@@ -149,9 +155,10 @@ class Program
         Font font = new Font("Bahnschrift SemiBold", 54, FontStyle.Bold);
         PointF position = new PointF(120, 85);
         Brush colorBrush = Brushes.Black;
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Gray));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
-
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
     static void GenerateImagesTemplate6(int imageCount, int digitCount)
@@ -162,12 +169,14 @@ class Program
 
         Rectangle eraseArea = new Rectangle(19, 50, 200, 66);
         Rectangle sourceArea = new Rectangle(34, 23, 34, 23);
-        Font font = new Font("Bahnschrift SemiBold", 54, FontStyle.Bold);
-        PointF position = new PointF(08, 54);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 60, FontStyle.Regular);
+        PointF position = new PointF(08, 40);
         Brush colorBrush = Brushes.Black;
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.White));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
 
@@ -179,12 +188,13 @@ class Program
 
         Rectangle eraseArea = new Rectangle(120, 73, 175, 70);
         Rectangle sourceArea = new Rectangle(122, 64, 34, 08);
-        Font font = new Font("Bahnschrift SemiBold SemiConden", 50, FontStyle.Bold);
-        PointF position = new PointF(108, 83);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 58, FontStyle.Regular);
+        PointF position = new PointF(108, 68);
         Brush colorBrush = Brushes.Black;
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.White));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
-
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
     static void GenerateImagesTemplate8(int imageCount, int digitCount)
@@ -195,13 +205,15 @@ class Program
 
         Rectangle eraseArea = new Rectangle(130, 83, 180, 70);
         Rectangle sourceArea = new Rectangle(122, 64, 34, 08);
-        Font font = new Font("Bahnschrift SemiBold", 50, FontStyle.Bold);
-        PointF position = new PointF(116, 90);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 60, FontStyle.Regular);
+        PointF position = new PointF(116, 72);
         Brush colorBrush = Brushes.Black;
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.White));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
-
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
+
 
     static void GenerateImagesTemplate9(int imageCount, int digitCount)
     {
@@ -226,10 +238,10 @@ class Program
         }
 
         Brush colorBrush = new SolidBrush(sampledColor);
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Gray));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
-
-
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, eraseAreaSingleDigit, sourceAreaSingleDigit, font, position, positionSingleDigit, colorBrush, imageCount, digitCount, true);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, eraseAreaSingleDigit, sourceAreaSingleDigit, font, position, positionSingleDigit, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, true);
     }
 
     static void GenerateImagesTemplate10(int imageCount, int digitCount)
@@ -240,8 +252,8 @@ class Program
 
         Rectangle eraseArea = new Rectangle(94, 50, 142, 69);
         Rectangle sourceArea = new Rectangle(17, 60, 60, 40);
-        Font font = new Font("Bahnschrift SemiBold", 52, FontStyle.Bold);
-        PointF position = new PointF(76, 50);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 60, FontStyle.Bold);
+        PointF position = new PointF(76, 40);
         Color sampledColor;
         using (Bitmap bitmap = new Bitmap(originalImagePath))
         {
@@ -250,9 +262,10 @@ class Program
         }
 
         Brush colorBrush = new SolidBrush(sampledColor);
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Gray));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
-
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
     static void GenerateImagesTemplate11(int imageCount, int digitCount)
@@ -261,14 +274,15 @@ class Program
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template11");
         Directory.CreateDirectory(outputDirectory);
 
-        Rectangle eraseArea = new Rectangle(140, 85, 185, 80);
+        Rectangle eraseArea = new Rectangle(135, 85, 185, 80);
         Rectangle sourceArea = new Rectangle(132, 64, 34, 08);
-        Font font = new Font("Bahnschrift SemiBold", 52, FontStyle.Bold);
-        PointF position = new PointF(120, 90);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 58, FontStyle.Regular);
+        PointF position = new PointF(120, 80);
         Brush colorBrush = Brushes.Black;
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.White));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
-
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
     static void GenerateImagesTemplate12(int imageCount, int digitCount)
@@ -279,12 +293,13 @@ class Program
 
         Rectangle eraseArea = new Rectangle(140, 85, 185, 80);
         Rectangle sourceArea = new Rectangle(132, 64, 34, 08);
-        Font font = new Font("Bahnschrift SemiBold", 54, FontStyle.Bold);
-        PointF position = new PointF(122, 95);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 64, FontStyle.Regular);
+        PointF position = new PointF(122, 75);
         Brush colorBrush = Brushes.Black;
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Gray));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
-
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
     static void GenerateImagesTemplate13(int imageCount, int digitCount)
@@ -295,12 +310,13 @@ class Program
 
         Rectangle eraseArea = new Rectangle(21, 61, 244, 80);
         Rectangle sourceArea = new Rectangle(34, 23, 34, 23);
-        Font font = new Font("Bahnschrift SemiBold", 60, FontStyle.Bold);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 60, FontStyle.Bold);
         PointF position = new PointF(21, 64);
         Brush colorBrush = Brushes.White;
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Black));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
-
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
     static void GenerateImagesTemplate14(int imageCount, int digitCount)
@@ -311,12 +327,13 @@ class Program
 
         Rectangle eraseArea = new Rectangle(91, 18, 168, 60);
         Rectangle sourceArea = new Rectangle(256, 18, 40, 56);
-        Font font = new Font("Bahnschrift SemiBold", 54, FontStyle.Bold);
-        PointF position = new PointF(91, 18);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 58, FontStyle.Regular);
+        PointF position = new PointF(91, 10);
         Brush colorBrush = Brushes.White;
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Blue));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
-
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
     static void GenerateImagesTemplate15(int imageCount, int digitCount)
@@ -327,12 +344,13 @@ class Program
 
         Rectangle eraseArea = new Rectangle(130, 75, 190, 80);
         Rectangle sourceArea = new Rectangle(132, 64, 34, 08);
-        Font font = new Font("Bahnschrift SemiBold", 56, FontStyle.Bold);
-        PointF position = new PointF(115, 85);
+        Font font = new Font("Roadgeek 2005 Mittelschrift", 62, FontStyle.Regular);
+        PointF position = new PointF(115, 75);
         Brush colorBrush = Brushes.Black;
+        Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Gray));
+        Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
-
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, imageCount, digitCount, false);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
     static Color GetAverageColor(Bitmap bitmap, Rectangle sampleArea)
@@ -361,7 +379,21 @@ class Program
         return Color.FromArgb(r, g, b);
     }
 
-    static void GenerateImages(string originalImagePath, string outputDirectory, Rectangle eraseArea, Rectangle sourceArea, Rectangle eraseAreaSingleDigit, Rectangle sourceAreaSingleDigit, Font font, PointF position, PointF positionSingleDigit, Brush colorBrush, int imageCount, int digitCount, bool includeSingleDigitArea = false)
+    public static Bitmap ApplyGaussianBlur(Bitmap image, Rectangle eraseArea, float radius)
+    {
+        var blurEffect = new AForge.Imaging.Filters.GaussianBlur(radius, 0);
+
+        Bitmap blurredImage = blurEffect.Apply((Bitmap)image.Clone());
+
+        using (Graphics g = Graphics.FromImage(image))
+        {
+            g.DrawImage(blurredImage, eraseArea, eraseArea, GraphicsUnit.Pixel);
+        }
+
+        return image;
+    }
+
+    static void GenerateImages(string originalImagePath, string outputDirectory, Rectangle eraseArea, Rectangle sourceArea, Rectangle eraseAreaSingleDigit, Rectangle sourceAreaSingleDigit, Font font, PointF position, PointF positionSingleDigit, Brush colorBrush, Brush darkShadowBrush, Brush lightShadowBrush, int imageCount, int digitCount, bool includeSingleDigitArea = false, bool applyBlur = false)
     {
         Random random = new Random();
         for (int numberPlate = 0; numberPlate < imageCount; numberPlate++)
@@ -369,11 +401,11 @@ class Program
             using (Bitmap bitmap = new Bitmap(originalImagePath))
             using (Graphics graphics = Graphics.FromImage(bitmap))
             {
-                processImage(outputDirectory, numberPlate, graphics, bitmap, sourceArea, eraseArea, font, position, colorBrush, random, digitCount);
+                processImage(outputDirectory, numberPlate, graphics, bitmap, sourceArea, eraseArea, font, position, colorBrush, darkShadowBrush, lightShadowBrush, random, digitCount,applyBlur);
 
                 if (includeSingleDigitArea)
                 {
-                    processImage(outputDirectory, numberPlate, graphics, bitmap, sourceAreaSingleDigit, eraseAreaSingleDigit, font, positionSingleDigit, colorBrush, random, 1);
+                    processImage(outputDirectory, numberPlate, graphics, bitmap, sourceAreaSingleDigit, eraseAreaSingleDigit, font, positionSingleDigit, colorBrush, darkShadowBrush, lightShadowBrush, random, 1,applyBlur);
 
                 }
 
@@ -381,7 +413,7 @@ class Program
         }
     }
 
-    static void processImage(string outputDirectory, int numberPlate, Graphics graphics, Bitmap bitmap, Rectangle sourceArea, Rectangle eraseArea, Font font, PointF position, Brush colorBrush, Random random, int digitCount)
+    static void processImage(string outputDirectory, int numberPlate, Graphics graphics, Bitmap bitmap, Rectangle sourceArea, Rectangle eraseArea, Font font, PointF position, Brush colorBrush, Brush darkShadowBrush, Brush lightShadowBrush, Random random, int digitCount, bool applyBlur)
     {
         {
             Bitmap clonedSection = bitmap.Clone(sourceArea, bitmap.PixelFormat);
@@ -395,12 +427,12 @@ class Program
             float centeredX = eraseArea.X + (eraseArea.Width - textSize.Width) / 2;
 
             // Shadow effects
-            Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Black));
+            //Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Black));
             float darkShadowOffsetX = 1;
             float darkShadowOffsetY = 1;
             graphics.DrawString(randomNumber, font, darkShadowBrush, centeredX + darkShadowOffsetX, position.Y + darkShadowOffsetY);
 
-            Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.White));
+            //Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.White));
             float lightShadowOffsetX = -0.75f;
             float lightShadowOffsetY = -0.75f;
             graphics.DrawString(randomNumber, font, lightShadowBrush, centeredX + lightShadowOffsetX, position.Y + lightShadowOffsetY);
@@ -408,10 +440,23 @@ class Program
             // Draw the main text at the centered position
             graphics.DrawString(randomNumber, font, colorBrush, centeredX, position.Y);
 
-            string filePath = Path.Combine(outputDirectory, $"plate_{numberPlate + 1}.png");
-            bitmap.Save(filePath, ImageFormat.Png);
-            Console.WriteLine($"Generated image {numberPlate + 1} with number {randomNumber}");
+            if (applyBlur)
+            {
+                using (Bitmap blurredImage = ApplyGaussianBlur(bitmap, eraseArea, 1))
+                {
 
+                    string filePath1 = Path.Combine(outputDirectory, $"plate_{numberPlate + 1}.png");
+                    blurredImage.Save(filePath1, ImageFormat.Png);
+                    Console.WriteLine($"Generated image {numberPlate + 1} with number {randomNumber}");
+                }
+            }
+            else
+            {
+
+                string filePath = Path.Combine(outputDirectory, $"plate_{numberPlate + 1}.png");
+                bitmap.Save(filePath, ImageFormat.Png);
+                Console.WriteLine($"Generated image {numberPlate + 1} with number {randomNumber}");
+            }
         }
 
         static string GenerateRandomNumber(Random random, int digitCount)
