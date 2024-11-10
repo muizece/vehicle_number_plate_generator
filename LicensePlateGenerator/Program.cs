@@ -12,18 +12,18 @@ class Program
         Console.WriteLine("1. For Private, Private Transport, and Export templates");
         Console.WriteLine("2. For Private template");
         Console.WriteLine("3. For Private Transport template");
-        Console.WriteLine("4. For UnderExpe template");
+        Console.WriteLine("4. For Under Experiment template");
         Console.WriteLine("5. For Export template");
-        Console.WriteLine("6. For Equip template");
-        Console.WriteLine("7. For Template 6");
+        Console.WriteLine("6. For Equipment template");
+        Console.WriteLine("7. For M/Cycle Template");
         Console.WriteLine("8. For Taxi template");
         Console.WriteLine("9. For Public Transport template");
-        Console.WriteLine("10. For CD template");
-        Console.WriteLine("11. For UN template");
-        Console.WriteLine("12. For LIMO template");
+        Console.WriteLine("10. For Diplomatic template");
+        Console.WriteLine("11. For United Nation template");
+        Console.WriteLine("12. For Limousine template");
         Console.WriteLine("13. For Commercial template");
         Console.WriteLine("14. For Police template");
-        Console.WriteLine("15. For Shurta template");
+        Console.WriteLine("15. For Police  Second template");
         Console.WriteLine("16. For Trailer template");
 
         int templateNumber = int.Parse(Console.ReadLine());
@@ -43,16 +43,16 @@ class Program
                 GenerateImagesForPrivateTransportTemplate(1000);
                 break;
             case 4:
-                GenerateImagesForUnderExpeTemplate(1000, 5);
+                GenerateImagesForUnderExperimentTemplate(1000, 5);
                 break;
             case 5:
                 GenerateImagesForExportTemplate(1000, 6);
                 break;
             case 6:
-                GenerateImagesForEquipTemplate(1000, 5);
+                GenerateImagesForEquipmentTemplate(1000, 5);
                 break;
             case 7:
-                GenerateImagesTemplate6(1000, 5);
+                GenerateImagesMCycleTemplate(1000, 5);
                 break;
             case 8:
                 GenerateImagesForTaxiTemplate(1000, 5);
@@ -61,13 +61,13 @@ class Program
                 GenerateImagesForPublicTransportTemplate(1000, 5);
                 break;
             case 10:
-                GenerateImagesForCDTemplate(1000, 3);
+                GenerateImagesForDiplomaticTemplate(1000, 3);
                 break;
             case 11:
-                GenerateImagesForUNTemplate(1000, 4);
+                GenerateImagesForUnitedNationTemplate(1000, 4);
                 break;
             case 12:
-                GenerateImagesForLIMOTemplate(1000, 5);
+                GenerateImagesForLimousineTemplate(1000, 5);
                 break;
             case 13:
                 GenerateImagesForCommercialTemplate(1000, 5);
@@ -76,7 +76,7 @@ class Program
                 GenerateImagesForPoliceTemplate(1000, 5);
                 break;
             case 15:
-                GenerateImagesForShurtaTemplate(1000, 4);
+                GenerateImagesForPoliceTemplate2(1000, 4);
                 break;
             case 16:
                 GenerateImagesForTrailerTemplate(1000, 5);
@@ -92,10 +92,10 @@ class Program
 
     static void GenerateImagesForPrivateTemplate(int imageCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template1.png");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "PrivateTemplate.png");
 
 
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template1");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Private Template");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(57, 81, 254, 69);
@@ -117,8 +117,8 @@ class Program
 
     static void GenerateImagesForPrivateTransportTemplate(int imageCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template2.png");
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template2");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "PrivateTransortTemplate.png");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Private Transport Template");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(60, 78, 238, 74);
@@ -133,10 +133,10 @@ class Program
         int digitCount = random.Next(4, 7);
         GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
-    static void GenerateImagesForUnderExpeTemplate(int imageCount, int digitCount)
+    static void GenerateImagesForUnderExperimentTemplate(int imageCount, int digitCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template3.png");
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template3");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "UnderExperimentTemplate.png");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Under Experiment Template");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(130, 80, 182, 70);
@@ -152,8 +152,8 @@ class Program
 
     static void GenerateImagesForExportTemplate(int imageCount, int digitCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template4.png");
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template4");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "ExportTemplate.png");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Export Template");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(130, 80, 180, 70);
@@ -167,10 +167,10 @@ class Program
         GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
-    static void GenerateImagesForEquipTemplate(int imageCount, int digitCount)
+    static void GenerateImagesForEquipmentTemplate(int imageCount, int digitCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template5.png");
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template5");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "EquipmentTemplate.png");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Equipment Template");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(132, 84, 194, 70);
@@ -184,10 +184,10 @@ class Program
         GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
-    static void GenerateImagesTemplate6(int imageCount, int digitCount)
+    static void GenerateImagesMCycleTemplate(int imageCount, int digitCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template6.png");
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template6");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "M_CycleTemplate.png");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "M_Cycle Template");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(19, 50, 200, 66);
@@ -205,8 +205,8 @@ class Program
 
     static void GenerateImagesForTaxiTemplate(int imageCount, int digitCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template7.png");
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template7");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "TaxiTemplate.png");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Taxi Template");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(120, 73, 175, 70);
@@ -222,8 +222,8 @@ class Program
 
     static void GenerateImagesForPublicTransportTemplate(int imageCount, int digitCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template8.png");
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template8");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "PublicTransportTemplate.png");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Public Transport Template");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(130, 83, 180, 70);
@@ -238,10 +238,10 @@ class Program
     }
 
 
-    static void GenerateImagesForCDTemplate(int imageCount, int digitCount)
+    static void GenerateImagesForDiplomaticTemplate(int imageCount, int digitCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template9.png");
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template9");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "DiplomaticTemplate.png");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Diplomatic Template");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(125, 90, 78, 38);
@@ -267,10 +267,10 @@ class Program
         GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, eraseAreaSingleDigit, sourceAreaSingleDigit, font, position, positionSingleDigit, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, true);
     }
 
-    static void GenerateImagesForUNTemplate(int imageCount, int digitCount)
+    static void GenerateImagesForUnitedNationTemplate(int imageCount, int digitCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template10.png");
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template10");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "UnitedNationTemplate.png");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "United Nation Template");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(94, 50, 142, 69);
@@ -291,10 +291,10 @@ class Program
         GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
-    static void GenerateImagesForLIMOTemplate(int imageCount, int digitCount)
+    static void GenerateImagesForLimousineTemplate(int imageCount, int digitCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template11.png");
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template11");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "LimousineTemplate.png");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Limousine Template");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(135, 85, 185, 80);
@@ -310,8 +310,8 @@ class Program
 
     static void GenerateImagesForCommercialTemplate(int imageCount, int digitCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template12.png");
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template12");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "CommercialTemplate.png");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Commercial Template");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(140, 85, 185, 80);
@@ -327,8 +327,8 @@ class Program
 
     static void GenerateImagesForPoliceTemplate(int imageCount, int digitCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template13.png");
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template13");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "PoliceTemplate.png");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Police Template");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(21, 61, 244, 80);
@@ -342,10 +342,10 @@ class Program
         GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
     }
 
-    static void GenerateImagesForShurtaTemplate(int imageCount, int digitCount)
+    static void GenerateImagesForPoliceTemplate2(int imageCount, int digitCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template14.png");
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template14");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "PoliceTemplate2.png");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Police Template 2");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(91, 18, 168, 60);
@@ -361,8 +361,8 @@ class Program
 
     static void GenerateImagesForTrailerTemplate(int imageCount, int digitCount)
     {
-        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Images", "template15.png");
-        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Template15");
+        string originalImagePath = Path.Combine(AppContext.BaseDirectory, "Sample Template Images", "TrailerTemplate.png");
+        string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Trailer Template");
         Directory.CreateDirectory(outputDirectory);
 
         Rectangle eraseArea = new Rectangle(130, 75, 190, 80);
