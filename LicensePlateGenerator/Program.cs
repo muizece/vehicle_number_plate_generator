@@ -121,17 +121,17 @@ class Program
         string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedImages", "Private Transport Template");
         Directory.CreateDirectory(outputDirectory);
 
-        Rectangle eraseArea = new Rectangle(60, 78, 238, 74);
+        Rectangle eraseArea = new Rectangle(60, 78, 234, 73);
         Rectangle sourceArea = new Rectangle(61, 72, 235, 5);
         Font font = new Font("Roadgeek 2005 Mittelschrift", 60, FontStyle.Regular);
         PointF position = new PointF(48, 66);
-        Brush colorBrush = Brushes.White;
-        Brush darkShadowBrush = new LinearGradientBrush(new Point(0, 0),new Point(100, 100),Color.FromArgb(120, Color.White),Color.Black);
+        Brush colorBrush = new SolidBrush(Color.FromArgb(245, 245, 230));
+        Brush darkShadowBrush = new LinearGradientBrush(new Point(0, 0),new Point(100, 100),Color.FromArgb(130, Color.WhiteSmoke),Color.Black);
         Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.Black));
         Random random = new Random();
 
         int digitCount = random.Next(4, 7);
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, true);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, Rectangle.Empty, Rectangle.Empty, font, position, PointF.Empty, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, false, false);
     }
     static void GenerateImagesForUnderExperimentTemplate(int imageCount, int digitCount)
     {
@@ -264,7 +264,7 @@ class Program
         Brush darkShadowBrush = new SolidBrush(Color.FromArgb(120, Color.Gray));
         Brush lightShadowBrush = new SolidBrush(Color.FromArgb(150, Color.WhiteSmoke));
 
-        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, eraseAreaSingleDigit, sourceAreaSingleDigit, font, position, positionSingleDigit, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount, true);
+        GenerateImages(originalImagePath, outputDirectory, eraseArea, sourceArea, eraseAreaSingleDigit, sourceAreaSingleDigit, font, position, positionSingleDigit, colorBrush, darkShadowBrush, lightShadowBrush, imageCount, digitCount,true);
     }
 
     static void GenerateImagesForUnitedNationTemplate(int imageCount, int digitCount)
@@ -404,7 +404,7 @@ class Program
 
     public static Bitmap ApplyGaussianBlur(Bitmap image, Rectangle eraseArea, float radius)
     {
-        var blurEffect = new AForge.Imaging.Filters.GaussianBlur(radius, 0);
+        var blurEffect = new AForge.Imaging.Filters.GaussianBlur(radius, 1);
 
         Bitmap blurredImage = blurEffect.Apply((Bitmap)image.Clone());
 
@@ -416,7 +416,7 @@ class Program
         return image;
     }
 
-    static void GenerateImages(string originalImagePath, string outputDirectory, Rectangle eraseArea, Rectangle sourceArea, Rectangle eraseAreaSingleDigit, Rectangle sourceAreaSingleDigit, Font font, PointF position, PointF positionSingleDigit, Brush colorBrush, Brush darkShadowBrush, Brush lightShadowBrush, int imageCount, int digitCount, bool includeSingleDigitArea = false, bool applyBlur = false)
+    static void GenerateImages(string originalImagePath, string outputDirectory, Rectangle eraseArea, Rectangle sourceArea, Rectangle eraseAreaSingleDigit, Rectangle sourceAreaSingleDigit, Font font, PointF position, PointF positionSingleDigit, Brush colorBrush, Brush darkShadowBrush, Brush lightShadowBrush, int imageCount, int digitCount, bool includeSingleDigitArea=false, bool applyBlur=false)
     {
         Random random = new Random();
         for (int numberPlate = 0; numberPlate < imageCount; numberPlate++)
